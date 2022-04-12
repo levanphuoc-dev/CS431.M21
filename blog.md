@@ -91,6 +91,7 @@ Tiếp theo ta sử dụng công thức:
 Trong đó, gradient theo từng cột có thể tính được dựa theo (3):
 
 <img src="https://render.githubusercontent.com/render/math?math=\frac{\partial L_i (\theta)}{\partial \theta_j} = - y_{ji} x_i \dotplus \frac{\exp(\theta_j_T x_i)}{\sum_{k=1}^C \exp(\theta_k^T x_i)} x_i = - y_{ji} x_i \dotplus a_{ji} x_i = x_i (a_{ji} - y_{ji}) = e_{ji} x_i"> (5)
+
 Trong đó, giá trị <img src="https://render.githubusercontent.com/render/math?math=e_{ji} = a_{ji} - y_{ji}"> có thể coi là sai số dự đoán.
 
 Đến đây ta đã được biểu thức rất đẹp rồi. Kết hợp (4) và (5) ta có:
@@ -100,7 +101,7 @@ Trong đó, giá trị <img src="https://render.githubusercontent.com/render/mat
 Từ đây ta cũng có thể suy ra rằng:
 
 <img src="https://render.githubusercontent.com/render/math?math=\frac{\partial L (\theta)}{\partial \theta} = \sum_{i=1}^N x_i e_i^T = X E^T">
-với <img src="https://render.githubusercontent.com/render/math?math=E = A − Y">
+với <img src="https://render.githubusercontent.com/render/math?math=E=A-Y">
 
 Giả sử rằng chúng ta sử dụng SGD, công thức cập nhật cho ma trận trọng số <img src="https://render.githubusercontent.com/render/math?math=\theta"> sẽ là:
 
